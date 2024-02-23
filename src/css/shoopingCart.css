@@ -33,6 +33,8 @@
     margin-top: 1vh;
     width: 100%;
     height: 80%;
+    overflow-y: auto;
+    padding-right: 3%;
 }
 
 .list-products > div{
@@ -53,14 +55,44 @@
 
 .cardRequireds{
     margin-bottom: 3vh;
-    height: 48%;
+    height: 58%;
     width: 100%;
     background-color: #212529;
 }
 
+.logo{
+    width: 15%;
+    height: 20%;
+    background-image: url(../img/visa-icon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
 .inputsPayment{
     margin-top: 4%;
-    height: 48%;
+    height: 38%;
     width: 100%;
     background-color: #212529;
 }
+
+
+
+
+
+
+::-webkit-scrollbar {
+
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px; 
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #212529;
+  }
