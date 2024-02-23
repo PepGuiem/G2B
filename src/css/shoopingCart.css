@@ -2,17 +2,31 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
     background-color: rgba(192, 192, 192, 0.438); 
     height: 100%;
+    padding: 2%;
 }
 
 
 .container{
     margin-top: 1%;
     height: 80vh;
-    #212529!important
 }
 
 .row{
     height: 100%;
+}
+
+.products{
+    width: 40%;
+    height:100%;
+    background-color: #212529;
+}
+
+.payment{
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 58%;
 }
