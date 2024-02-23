@@ -4,8 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/shoopingCart.css">
 </head>
-<body>
-    
+<body class="align-items-center bg-dark">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light text-white">
+            <div class="container-fluid">
+              <a class="navbar-brand text-white" href="#"><img src="/assets/favicon.ico" alt="" width="45" height="45" class="d-inline-block align-text-top"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Features</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Pricing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#">About</a>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="card card-bg card-container">
+                <h5 class="card-title">Título de la tarjeta</h5>
+                <p class="card-text">Contenido de la tarjeta...</p>
+                <a href="#" class="btn btn-primary">Botón de la tarjeta</a>
+            </div>
+        </div>
+      </div>
+
+    <footer class="text-center bg-body-tertiary text-white">
+        <div class="text-center p-3">
+          © 2020 Copyright:
+          <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+    </footer>
 </body>
 </html>

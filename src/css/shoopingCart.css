@@ -1,0 +1,17 @@
+.card-bg {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(192, 192, 192, 0.438); 
+    height: 100%;
+}
+
+.container{
+    margin-top: 1%;
+    height: 80vh;
+    #212529!important
+}
+
+.row{
+    height: 100%;
+}
