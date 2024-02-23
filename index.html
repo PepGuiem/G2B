@@ -1,1 +1,140 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="/assets/logo-vt.svg">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  </head>
+  <body class="align-items-center bg-dark">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-secondary text-white">
+            <div class="container-fluid">
+              <a class="navbar-brand text-white" href="#"><img src="/assets/favicon.ico" alt="" width="45" height="45" class="d-inline-block align-text-top"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Features</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Pricing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#">About</a>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </header>
+<div class="container-xxl">
 
+        <div class="row justify-content-center mt-5 mx-5">
+
+            <div class="col-md-5 d-flex justify-content-center"> 
+            
+                <div class="bg-white p-5 rounded-5 text-secondary shadow" style="width: 25rem" id="form">
+                <div class="d-flex justify-content-center">
+                  <img src="/assets/login-icon.svg" alt="login-icon" style="height: 7rem">
+                </div>
+                <div class="text-center fs-1 fw-bold">Login</div>
+                <div class="input-group mt-4">
+                  <div class="input-group-text bg-dark">
+                    <img src="/assets/username-icon.svg" alt="username-icon" style="height: 1rem">
+                  </div>
+                  <input class="form-control bg-light" type="text" placeholder="Username">
+                </div>
+                <div class="input-group mt-1">
+                  <div class="input-group-text bg-dark">
+                    <img src="/assets/password-icon.svg" alt="password-icon" style="height: 1rem">
+                  </div>
+                  <input class="form-control bg-light" type="password" placeholder="Password">
+                </div>
+                <div class="d-flex justify-content-around mt-1">
+                  <div class="d-flex align-items-center gap-1">
+                    <input class="form-check-input" type="checkbox">
+                    <div class="pt-1" style="font-size: 0.9rem">Remember me</div>
+                  </div>
+              
+                </div>
+                <div class="btn btn-dark text-white w-100 mt-4 fw-semibold shadow-sm">
+                  Login
+                </div>
+                <div class="d-flex gap-1 justify-content-center mt-1">
+                  <div>Don't have an account?</div>
+                  <a href="#" class="text-decoration-none text-dark fw-semibold">Register</a>
+                </div>
+                <div class="p-3">
+                  <div class="border-bottom text-center" style="height: 0.9rem">
+                    <span class="bg-white px-3">or</span>
+                  </div>
+                </div>
+                <div class="btn d-flex gap-2 justify-content-center border mt-3 shadow-sm">
+                  <img src="/assets/steam-icon.svg" alt="google-icon" style="height: 1.8rem">
+                  <div class="fw-bold text-secondary">Continue with Steam</div>
+                </div>
+              </div>
+            
+            </div>
+
+
+
+
+            <div class="col-md-2 d-flex justify-content-center text-white fw-bold align-items-center"> <p class="h1">OR</p> </div>
+
+
+
+
+            <div class="col-md-4" id="box3">
+
+                <div class="row"  id="buttons">
+                    <div class="col" id="google">
+
+                        <div class="btn bg-light d-flex justify-content-center gap-1  shadow-sm">
+                            <img src="/assets/epic.svg" alt="google-icon" style="height: 1.8rem" class="mt-2">
+                            <div class="fw-bold mt-2">Continue with Epic</div>
+                          </div>
+    
+                    </div>
+                </div>
+                
+
+                <div class="row">
+                    <div class="col"id="google">
+
+                        <div class="btn bg-light d-flex justify-content-center gap-1  shadow-sm">
+                            <img src="/assets/google-icon.svg" alt="google-icon" style="height: 1.8rem" class="mt-2">
+                            <div class="fw-bold mt-2">Continue with Google</div>
+                          </div>
+    
+                    </div>
+                </div>
+            </div>
+
+        </div>
+      </div>
+
+      <footer class="text-center bg-body-tertiary bg-secondary text-white">
+        <!-- Copyright -->
+        <div class="text-center p-3">
+          © 2020 Copyright:
+          <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+
+
+
+</div></body></html>
