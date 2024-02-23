@@ -12,6 +12,6 @@ LISTA DE COSAS POR HACER (de la más a la menos importante):
 - Darle mejores estilos al navbar.
 - Darle mejores estilos al footer.
 - Hacer responsive lo que queda, es decir el carrito, los videojuegos y el soporte.
-- Darle mejores estilos al index.html, al carrito, a la página de compra/búsqueda de videojuegos y a la página de soporte/atención al cliente.
+- Darle mejores estilos al login.html, al carrito, a la página de compra/búsqueda de videojuegos y a la página de soporte/atención al cliente.
 - Revisar el performance.
 - Revisar la accesibilidad.
