@@ -22,11 +22,45 @@
     width: 40%;
     height:100%;
     background-color: #212529;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 2%;
+}
+
+.list-products{
+    margin-top: 1vh;
+    width: 100%;
+    height: 80%;
+}
+
+.list-products > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    height: 15%;
+    border-bottom: 2px rgba(192, 192, 192, 0.438) solid;
+    color: white;
+    padding: 0% 5%;
 }
 
 .payment{
     flex-direction: column;
-    justify-content: space-between;
     height: 100%;
     width: 58%;
+}
+
+.cardRequireds{
+    margin-bottom: 3vh;
+    height: 48%;
+    width: 100%;
+    background-color: #212529;
+}
+
+.inputsPayment{
+    margin-top: 4%;
+    height: 48%;
+    width: 100%;
+    background-color: #212529;
 }
