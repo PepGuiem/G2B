@@ -1,5 +1,6 @@
 :root {
     --background-color-nav-link-después: rgb(31, 32, 32);
+    --color-negro: black;
 }
 
 #video-background {
@@ -35,6 +36,10 @@
     opacity: 1;
 }
 
+#links {
+    text-decoration: none;
+    color: var(--color-negro);
+}
 
 #google, #epic{
     margin: 1vh;
