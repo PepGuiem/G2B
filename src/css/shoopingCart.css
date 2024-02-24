@@ -91,7 +91,6 @@
 }
 
 .inputsPayment{
-    margin-top: 4%;
     height: 38%;
     width: 100%;
     background-color: #212529;
@@ -171,7 +170,28 @@
   }
 
   @media only screen and (max-width: 768px) {
+    .card-bg {
+        flex-direction: column;
+        background-color: rgba(192, 192, 192, 0.438); 
+        height: 100%;
+        padding: 2%;
+    }
     .products{
         width: 100%;
+        height: 37%;
+    }
+
+    .list-products > div{
+        height: 40%;
+    }
+
+    .payment{
+        width: 100%;
+        height: 65%;
+    }
+
+    .cardRequireds{
+        margin-bottom: 0vh;
+        height: 60%;
     }
   }
