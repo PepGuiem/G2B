@@ -60,9 +60,28 @@
     background-color: #212529;
 }
 
+.cardRequireds > div{
+    width: 100%;
+    padding: 0% 5%;
+    height: 25%;
+    display: flex;
+}
+
+.logo-div{
+    align-items: center;
+}
+
+.inputs-credit{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    align-items:start;
+}
+
 .logo{
-    width: 15%;
-    height: 20%;
+    width: 20%;
+    margin-right: 3%;
+    height: 60%;
     background-image: url(../img/visa-icon.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -72,19 +91,52 @@
 }
 
 .inputsPayment{
-    margin-top: 4%;
     height: 38%;
     width: 100%;
     background-color: #212529;
+    padding: 5%;
 }
 
+.inputsPayment > div{
+    width: 100%;
+    padding: 0% 5%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
 
+.inputsPayment > .middle-inputs{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
 
+.button-large{
+    padding: 3% 15%;
+    background: linear-gradient(10deg,#003cff,transparent) #20d2ff;
+    border: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 700;
+    color: #fff;
+    font-family: barlow,arial,sans-serif;
+    font-size: 17px;
+    outline: none;
+    transition: .2s;
+    margin-top: 1%;
+}
 
+@keyframes cambioColor {
+    100% { background: linear-gradient(10deg,#003cff,transparent) #01134e; }
+}
 
+.button-large:hover{
+    background: linear-gradient(10deg,#003cff,transparent) #01134e;
+    transition: background 1s;
+}
 
 ::-webkit-scrollbar {
-
     width: 10px;
   }
   
@@ -95,4 +147,51 @@
   
   ::-webkit-scrollbar-track {
     background-color: #212529;
+  }
+
+  .large-inputs{
+    background-color: hsla(0,0%,6%,.4);
+    border: 0;
+    border-radius: 7px;
+    box-shadow: inset 0 0 0 2px #3d3d3d;
+    color: #fff;
+    font-family: barlow,arial,sans-serif;
+    font-size: 17px;
+    height: 50%;
+    outline: none;
+    padding: 15px 20px;
+    transition: .2s;
+    width: 100%;
+    margin-top: 1%;
+  }
+
+  .middle-inputs{
+    justify-content: space-between;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .card-bg {
+        flex-direction: column;
+        background-color: rgba(192, 192, 192, 0.438); 
+        height: 100%;
+        padding: 2%;
+    }
+    .products{
+        width: 100%;
+        height: 37%;
+    }
+
+    .list-products > div{
+        height: 40%;
+    }
+
+    .payment{
+        width: 100%;
+        height: 65%;
+    }
+
+    .cardRequireds{
+        margin-bottom: 0vh;
+        height: 60%;
+    }
   }

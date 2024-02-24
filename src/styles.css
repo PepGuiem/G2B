@@ -1,5 +1,6 @@
 :root {
     --background-color-nav-link-después: rgb(31, 32, 32);
+    --color-negro: black;
 }
 
 #video-background {
@@ -35,6 +36,75 @@
     opacity: 1;
 }
 
+#links {
+    text-decoration: none;
+    color: var(--color-negro);
+}
+
+#google {
+    border-radius: 20px;
+}
+
+
+.btn.btn-incomplete {
+    background-color: rgba(255, 0, 0, 0.2); 
+    color: #fff;
+    border: 2px solid #000;
+    box-shadow: 0 0 5px #000, 0 0 10px #000;
+}
+
+.btn.btn-complete {
+    background-color: rgba(0, 255, 0, 0.2);
+}
+
+  #box3 .btn {
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #333;
+    box-shadow: 0 0 5px #333, 0 0 10px #333;
+  }
+
+  #OR {
+    color: #fff;
+  }
+
+
+  .neon {
+    position: relative;
+    overflow: hidden;
+  }
+  .neon::before,
+  .neon::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background-color: #fff;
+    box-shadow: 0 0 10px #00fff9, 0 0 20px #00fff9, 0 0 40px #00fff9, 0 0 80px #00fff9;
+    opacity: 0;
+    animation: neon 1.5s infinite linear;
+  }
+  @keyframes neon {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  .neon-button {
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
 
 #google, #epic{
     margin: 1vh;
