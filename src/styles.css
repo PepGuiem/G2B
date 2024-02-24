@@ -41,6 +41,15 @@
     color: var(--color-negro);
 }
 
+.btn.btn-incomplete {
+    background-color: rgba(255, 0, 0, 0.2); 
+}
+
+.btn.btn-complete {
+    background-color: rgba(0, 255, 0, 0.2);
+}
+
+
 #google, #epic{
     margin: 1vh;
 }
