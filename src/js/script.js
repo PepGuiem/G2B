@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const MAX_ROWS = 25;
     const GAMES_PER_ROW = 4;
     const MIN_RATING = 4.1;
-    const TOTAL_GAMES = MAX_ROWS * GAMES_PER_ROW; // Calculamos el total de juegos a mostrar
+    const TOTAL_GAMES = MAX_ROWS * GAMES_PER_ROW; 
   
     function fetchGameData(page) {
       return fetch(`${GAME_URL}&page=${page}`)
