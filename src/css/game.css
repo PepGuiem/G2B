@@ -1,0 +1,59 @@
+.card-bg {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background-color: rgba(192, 192, 192, 0.438); 
+    height: 100%;
+    padding: 2%;
+}
+
+.container{
+    margin-top: 1%;
+    height: 80vh;
+}
+
+.row{
+    height: 100%;
+}
+
+.left{
+    width: 50%;
+    height: 100%;
+}
+
+.title{
+    height: 20%;
+    width: 100%;
+}
+
+.carousel{
+    width: 100%;
+    padding: 2%;
+    height: 46%;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+.info{
+    margin-top: 2%;
+    height: 25%;
+    width: 100%;
+}
+
+.right{
+    width: 50%;
+    height: 100%;
+}
+
+.products{
+    width: 100%;
+    height:100%;
+    background-color: #212529;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    padding: 2%;
+}
