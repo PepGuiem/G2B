@@ -1,6 +1,9 @@
 :root {
     --background-color-nav-link-después: rgb(31, 32, 32);
     --color-negro: black;
+    --navbar-footer-color: #343a40;
+    --box3-color: #333; 
+    --color-blanco: white;
 }
 
 #video-background {
@@ -72,49 +75,53 @@
   .neon {
     position: relative;
     overflow: hidden;
-  }
-  .neon::before,
-  .neon::after {
+}
+
+.neon::before,
+.neon::after {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: calc(100% + 6px); /* Ancho ajustado para que cubra el borde correctamente */
+    height: calc(100% + 6px); /* Alto ajustado para que cubra el borde correctamente */
     border-radius: inherit;
-    background-color: #fff;
-    box-shadow: 0 0 10px #00fff9, 0 0 20px #00fff9, 0 0 40px #00fff9, 0 0 80px #00fff9;
+    border: 3px solid var(--color-blanco);
     opacity: 0;
     animation: neon 1.5s infinite linear;
-  }
-  @keyframes neon {
+}
+
+@keyframes neon {
     0%,
     100% {
-      opacity: 0;
+        opacity: 0;
     }
     50% {
-      opacity: 1;
+        opacity: 1;
     }
-  }
-  .neon-button {
-    background-color: #ffffff;
-    color: #000000;
-    border-radius: 20px;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-  }
+}
+
+.neon-button {
+  background-color: var(--navbar-footer-color); /* Color del navbar y del footer */
+  color: #fff; /* Texto en color blanco */
+}
+
+#box3{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#box3 .btn {
+  background-color: var(--box3-color); /* Color para el box3 */
+  color: #fff; /* Texto en color blanco */
+}
 
 #google, #epic{
     margin: 1vh;
 }
 
-#box3{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+
 
 footer {
     position: fixed;
@@ -122,6 +129,8 @@ footer {
     width: 100%;
     padding: 10px 0;
     text-align: center;
+    background-color: var(--navbar-footer-color);
+
 }
 
 
