@@ -17,8 +17,6 @@ function mostrarMensaje() {
 }
 
 window.addEventListener('scroll', mostrarMensaje);
-
-
 function renderGameCards() {
   const container = document.getElementById("gameCardsContainer");
   let gamesRendered = 0; 
@@ -62,10 +60,16 @@ function createCard(game) {
         <li class="list-group-item">Released: ${game.released}</li>
       </ul>
       <div class="card-body">
-       <button type="button" class="btn btn-warning fw-bold">PURCHASE</button>
+      <a href="shoopingCart.html"><button type="button" class="btn btn-warning fw-bold" onclick="addToCart('${game.name}', '${price}')">PURCHASE</button></a>
       </div>
   `;
   return cardDiv;
+}
+
+function addToCart(gameName, gamePrice) {
+  const shoppingCart = JSON.parse(localStorage.getItem('shoppingCart')) || [];
+  shoppingCart.push({ name: gameName, price: gamePrice });
+  localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart));
 }
 
 function fetchGameData(page) {
