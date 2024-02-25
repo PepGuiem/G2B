@@ -86,7 +86,7 @@
     width: calc(100% + 6px);
     height: calc(100% + 6px); 
     border-radius: inherit;
-    border: 3px solid var(--navbar-footer-color);
+    border: 5px solid var(--navbar-footer-color);
     opacity: 0;
     animation: neon 1.5s infinite linear;
 }
@@ -108,21 +108,16 @@
   justify-content: center;
 }
 
-#box3 .btn {
-  background-color: var(--box3-color); 
-  color: #fff; 
-}
-
 
 #registrationForm.neon {
-  border: 3px solid var(--navbar-footer-color);
+  border: 6px solid var(--navbar-footer-color);
 }
 
 
 #registrationForm.neon input[type="text"],
 #registrationForm.neon input[type="password"],
 #registrationForm.neon input[type="email"] {
-  border: 3px solid var(--navbar-footer-color);
+  border: 4px solid var(--navbar-footer-color);
 }
 
 #google, #epic{
@@ -137,7 +132,6 @@ footer {
     width: 100%;
     padding: 10px 0;
     text-align: center;
-    background-color: var(--navbar-footer-color);
 
 }
 
