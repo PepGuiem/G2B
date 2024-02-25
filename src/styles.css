@@ -83,10 +83,10 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: calc(100% + 6px); /* Ancho ajustado para que cubra el borde correctamente */
-    height: calc(100% + 6px); /* Alto ajustado para que cubra el borde correctamente */
+    width: calc(100% + 6px);
+    height: calc(100% + 6px); 
     border-radius: inherit;
-    border: 3px solid var(--color-blanco);
+    border: 3px solid var(--navbar-footer-color);
     opacity: 0;
     animation: neon 1.5s infinite linear;
 }
@@ -101,10 +101,6 @@
     }
 }
 
-.neon-button {
-  background-color: var(--navbar-footer-color); /* Color del navbar y del footer */
-  color: #fff; /* Texto en color blanco */
-}
 
 #box3{
   display: flex;
@@ -113,8 +109,20 @@
 }
 
 #box3 .btn {
-  background-color: var(--box3-color); /* Color para el box3 */
-  color: #fff; /* Texto en color blanco */
+  background-color: var(--box3-color); 
+  color: #fff; 
+}
+
+
+#registrationForm.neon {
+  border: 3px solid var(--navbar-footer-color);
+}
+
+
+#registrationForm.neon input[type="text"],
+#registrationForm.neon input[type="password"],
+#registrationForm.neon input[type="email"] {
+  border: 3px solid var(--navbar-footer-color);
 }
 
 #google, #epic{
