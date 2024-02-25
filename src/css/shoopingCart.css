@@ -169,6 +169,25 @@
     justify-content: space-between;
   }
 
+  .button-clear-div{
+    margin-top: 3%;
+  }
+
+  .button-clear-div > button{
+    padding: 3% 15%;
+    background-color: rgba(192, 192, 192, 0.438);
+    border: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 700;
+    color: #fff;
+    font-family: barlow,arial,sans-serif;
+    font-size: 17px;
+    outline: none;
+    transition: .2s;
+    margin-top: 1%;
+  }
+
   @media only screen and (max-width: 768px) {
     .card-bg {
         flex-direction: column;

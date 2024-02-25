@@ -60,7 +60,7 @@ function createCard(game) {
         <li class="list-group-item">Released: ${game.released}</li>
       </ul>
       <div class="card-body">
-      <a href="shoopingCart.html"><button type="button" class="btn btn-warning fw-bold" onclick="addToCart('${game.name}', '${price}')">PURCHASE</button></a>
+      <button type="button" class="btn btn-warning fw-bold" onclick="addToCart('${game.name}', '${price}')">PURCHASE</button>
       </div>
   `;
   return cardDiv;
