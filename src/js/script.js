@@ -5,6 +5,7 @@ const API_KEY = "5686df9be51c45e0bcf75d315b3d5168";
 const GAME_URL = "https://api.rawg.io/api/games?key=" + API_KEY;
 const MIN_RATING = 4.1;
 var page = 0;
+var games = [];
 
 document.addEventListener("DOMContentLoaded", function() {
     renderGameCards();
@@ -45,6 +46,7 @@ function renderGameCards() {
 }
 
 function createCard(game) {
+  games.push(game);
   const cardDiv = document.createElement("div");
   cardDiv.className = "card";
   cardDiv.style = "width: 18rem;";
@@ -61,6 +63,7 @@ function createCard(game) {
       </ul>
       <div class="card-body">
       <button type="button" class="btn btn-warning fw-bold" onclick="addToCart('${game.name}', '${price}')">PURCHASE</button>
+      <button type="button" class="btn btn-primary" onclick="showGame('${game.id}', '${price}')">View</button>
       </div>
   `;
   return cardDiv;
@@ -95,3 +98,10 @@ function calculatePrice(releaseDate) {
     return "60.99€";
   }
 }
+
+function showGame(id){
+  var game = games.find(game => game.id == id);
+  localStorage.setItem('game', JSON.stringify(game))
+  window.location.replace("http://127.0.0.1:5500/src/game.html")
+}
+
