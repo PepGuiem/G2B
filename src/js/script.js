@@ -6,10 +6,25 @@ const GAME_URL = "https://api.rawg.io/api/games?key=" + API_KEY;
 const MIN_RATING = 4.1;
 var page = 0;
 var games = [];
+var selectedGenre = null; 
 
 document.addEventListener("DOMContentLoaded", function() {
+    populateGenres(); 
     renderGameCards();
 });
+
+function filterByGenre(genre) {
+  selectedGenre = genre; 
+  resetGameCards();
+  renderGameCards();
+}
+
+function resetGameCards() {
+  const container = document.getElementById("gameCardsContainer");
+  container.innerHTML = ''; 
+  page = 0;
+  games = []; 
+}
 
 function mostrarMensaje() {
   if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
@@ -18,6 +33,7 @@ function mostrarMensaje() {
 }
 
 window.addEventListener('scroll', mostrarMensaje);
+
 function renderGameCards() {
   const container = document.getElementById("gameCardsContainer");
   let gamesRendered = 0; 
@@ -76,7 +92,11 @@ function addToCart(gameName, gamePrice) {
 }
 
 function fetchGameData(page) {
-  return fetch(`${GAME_URL}&page=${page}`)
+  let url = `${GAME_URL}&page=${page}`;
+  if (selectedGenre) {
+    url += `&genres=${selectedGenre}`; 
+  }
+  return fetch(url)
     .then(response => response.json())
     .then(data => data.results.filter(game => game.rating >= MIN_RATING));
 }
@@ -104,4 +124,5 @@ function showGame(id){
   localStorage.setItem('game', JSON.stringify(game))
   window.location.replace("http://127.0.0.1:5500/src/game.html")
 }
+
 

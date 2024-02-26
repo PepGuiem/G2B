@@ -1,3 +1,8 @@
+body {
+  padding-top: 70px; /* Ajusta este valor según el tamaño del navbar */
+}
+
+
 .col {
     display: flex;
     justify-content: center; /* Centra horizontalmente el contenido */
@@ -7,9 +12,144 @@
   .card{
     border-radius: 6px;
     box-shadow: 6px 6px 6px rgb(100, 98, 98);
-    margin-top: 3%;
-    margin-bottom: 3%;
+    margin-top: 4%;
+    margin-bottom: 4%;
     z-index: 0;
     position: relative;
 }
 
+.container__projects{
+  display: flex;
+  flex-direction: row;
+  margin-top: 1%;
+}
+
+.contenedor{
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+  margin-left: 4%;
+}
+.contenedor figure{
+  position:relative;
+  height: 200px;
+  cursor: pointer;
+  width: 300px;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+}
+.contenedor figure img{
+  width: 100%;
+  height: 100%;
+  transition: all 400ms ease-out;
+  will-change: transform;
+}
+.contenedor figure .capa{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(241, 130, 2, 0.7);
+  transition: all 400ms ease-out;
+  opacity: 0;
+  visibility: hidden;
+ text-align: center;
+}
+.contenedor figure:hover > .capa {
+  opacity: 1;
+  visibility: visible;
+}
+.contenedor figure:hover > .capa h3{
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+.contenedor figure:hover > img{
+  transform: scale(1.3);
+}
+.contenedor figure .capa h3{
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 120px;
+  transition: all 400ms ease-out;
+
+}
+.contenedor figure .capa p{
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.5;
+  width: 100%;
+  max-width: 220px;
+  margin: auto;
+}
+
+#footer__projects{
+  margin-top: 11%;
+}
+
+@media screen and (max-width: 1326px) {
+  .contenedor figure{
+    height: 180px;
+    width: 250px;
+}
+}
+
+@media screen and (max-width: 1215px) {
+
+  .contenedor figure{
+       height: 170px;
+       width: 230px;
+   }
+
+}
+
+@media screen and (max-width: 1000px)  {
+  .contenedor figure{
+      height: 150px;
+      width: 200px;
+  }
+
+  .contenedor figure .capa h3{
+      font-size: 30px;
+     
+  }
+}
+
+
+@media screen and (max-width: 880px)  {
+  .container__projects{
+    display: flex;
+    flex-direction: column;
+    margin-left: 40%;
+}
+
+.contenedor{
+    margin-top: 10%;
+}
+
+.contenedor figure{
+    height: 200px;
+    width: 300px;
+}
+
+
+}
+
+@media screen and (max-width: 714px) {
+  .container__projects{
+      display: flex;
+      flex-direction: column;
+      margin-left: 40%;
+  }
+  
+  .contenedor{
+      margin-top: 10%;
+  }
+  
+  .contenedor figure{
+      height: 200px;
+      width: 300px;
+  }
+  }
