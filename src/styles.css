@@ -184,32 +184,37 @@ footer {
 
 #caja_xavi {
   padding-bottom: 12px;
-  padding-left: 16px;
+  padding-left: 3%;
 }
 
 #caja_pep {
   padding-bottom: 12px;
-  padding-left: 16px;
+  padding-left: 3%;
 }
 
 #caja_david {
   padding-bottom: 12px;
-  padding-left: 16px;
+  padding-left: 3%;
 }
 
 #imagen_david {
-  width: 30%;
-  height: 30%;
+  width: 350px;
+  height: 35%;
+  padding-bottom: 20px;
+  padding-left: 5%;
 }
 
 #imagen_pep {
-  width: 30%;
+  width: 350px;
   height: 30%;
+  padding-bottom: 20px;
+  padding-left: 5%;
 }
 
 #imagen_xavi {
-  width: 40%;
-  height: 45%;
+  width: 350px;
+  height: 35%;
+  padding-left: 4%;
 }
 
 @media only screen and (max-width: 991px) {
