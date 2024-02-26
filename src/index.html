@@ -101,7 +101,7 @@
         try {
           const response = await fetch(apiUrl);
           const data = await response.json();
-          return data.results.slice(0, 4); // Obtener solo los primeros cuatro géneros
+          return data.results.slice(0, 4); 
         } catch (error) {
           console.error('Error fetching data:', error);
         }
@@ -110,16 +110,15 @@
       async function populateGenres() {
         const genres = await fetchGenres();
         genres.forEach((genre, index) => {
-          const contenedor = document.getElementById((index + 1).toString()); // Obtener el contenedor por su ID
+          const contenedor = document.getElementById((index + 1).toString()); 
           const imagen = contenedor.querySelector('img');
           const titulo = contenedor.querySelector('h3');
     
-          imagen.src = genre.image_background; // Asignar la imagen de fondo del género
-          titulo.textContent = genre.name; // Asignar el nombre del género
+          imagen.src = genre.image_background;
+          titulo.textContent = genre.name; 
         });
       }
     
-      // Llamar a la función para poblar los géneros cuando se cargue la página
       window.onload = populateGenres;
     </script>
     
