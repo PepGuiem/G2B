@@ -1,3 +1,43 @@
+:root {
+    --color-blanco: rgb(233, 145, 63);
+}
+
+.nav-link{
+    transition: all 0.2s;
+    position: relative;
+}
+
+
+.nav-link::after{
+    content:'';
+    opacity: 0;
+    transition: all 0.2s;
+    height: 2px;
+    width: 100%;
+    background-color:var(--color-blanco);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.nav-link:hover::after{
+    opacity: 1;
+}
+
+
+.navbar-toggler {
+  background-color: rgb(235, 170, 31) !important;
+}
+
+.navbar-collapse {
+  display: none;
+}
+
+.navbar-collapse.show {
+  display: block;
+
+}
+
 .card-bg {
     display: flex;
     justify-content: space-between;
