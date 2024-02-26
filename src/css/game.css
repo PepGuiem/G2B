@@ -27,14 +27,15 @@
     width: 100%;
 }
 
-.carousel{
+.carousel1{
     width: 100%;
     padding: 2%;
-    height: 46%;
+    height: 70%;
     object-fit: cover;
     background-size: cover;
-    background-position: center;
+    background-position: center;  
 }
+
 
 .info{
     margin-top: 2%;
@@ -56,4 +57,35 @@
     flex-direction: row;
     align-items: center;
     padding: 2%;
+}
+
+.carousel1 > div {
+    height: 100%;
+}
+
+.carousel-inner{
+    height: 100%;
+}
+
+.carousel-item{
+    height: 100%;
+}
+
+.carousel-item > img{
+    height: 100%;
+}
+
+
+.imagen{
+    padding: 2%;
+    width: 100%;
+    height: 30%;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+.rating{
+    width: 100%;
+    height: 20%;
 }
