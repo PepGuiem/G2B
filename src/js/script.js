@@ -1,7 +1,11 @@
 const MAX_ROWS = 25;
 const GAMES_PER_ROW = 4;
 const TOTAL_GAMES = MAX_ROWS * GAMES_PER_ROW; 
+<<<<<<< HEAD
 const API_KEY = "7f3257dee5864baba14bd3c7a751279e";
+=======
+const API_KEY = "1baca15855374a6db824d20988b6f976";
+>>>>>>> 49d608c84c9e43cafdb2108b3abf70f534493736
 const GAME_URL = "https://api.rawg.io/api/games?key=" + API_KEY;
 const MIN_RATING = 4.1;
 var page = 0;

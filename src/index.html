@@ -95,13 +95,17 @@
     
     <script>
       async function fetchGenres() {
-        const apiKey = '5686df9be51c45e0bcf75d315b3d5168';
+        const apiKey = '1baca15855374a6db824d20988b6f976';
         const apiUrl = `https://api.rawg.io/api/genres?key=${apiKey}`;
     
         try {
           const response = await fetch(apiUrl);
           const data = await response.json();
+<<<<<<< HEAD
           return data.results.slice(0, 4); 
+=======
+          return data.results.slice(0, 4);
+>>>>>>> 49d608c84c9e43cafdb2108b3abf70f534493736
         } catch (error) {
           console.error('Error fetching data:', error);
         }
@@ -110,7 +114,11 @@
       async function populateGenres() {
         const genres = await fetchGenres();
         genres.forEach((genre, index) => {
+<<<<<<< HEAD
           const contenedor = document.getElementById((index + 1).toString()); 
+=======
+          const contenedor = document.getElementById((index + 1).toString());
+>>>>>>> 49d608c84c9e43cafdb2108b3abf70f534493736
           const imagen = contenedor.querySelector('img');
           const titulo = contenedor.querySelector('h3');
     
@@ -118,7 +126,10 @@
           titulo.textContent = genre.name; 
         });
       }
+<<<<<<< HEAD
     
+=======
+>>>>>>> 49d608c84c9e43cafdb2108b3abf70f534493736
       window.onload = populateGenres;
     </script>
     
