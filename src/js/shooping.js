@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
       totalPrice = totalPrice + parseFloat(item.price);
       const productDiv = document.createElement('div');
       productDiv.innerHTML = `
-          <p>${item.name}</p>
+          <p tabindex="0">${item.name}</p>
           <p>${item.price}</p>
       `;
       listContainer.appendChild(productDiv);
@@ -19,4 +19,6 @@ document.addEventListener("DOMContentLoaded", function() {
       localStorage.setItem('shoppingCart', JSON.stringify([]));
       location.reload();
     });
+
+
   });
