@@ -138,7 +138,7 @@
 99C:\Users\Usuario\Desktop\G2B\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\mtest3.c133534610313977760 0
 69C:\Users\Usuario\Desktop\G2B\node_modules\domutils\lib\stringify.d.ts133534610309964120 0
 43C:\Users\Usuario\Desktop\G2B\src\login.html133534516644470514 0
-116C:\Users\Usuario\Desktop\G2B\src\videos\Recursos _ Vídeos de fondo _ Persona tecleando (online-video-cutter.com).mp4133532446070439926 0
+116C:\Users\Usuario\Desktop\G2B\src\videos\Recursos _ Vï¿½deos de fondo _ Persona tecleando (online-video-cutter.com).mp4133532446070439926 0
 73C:\Users\Usuario\Desktop\G2B\node_modules\posthtml-parser\dist\index.d.ts133534610308572861 0
 50C:\Users\Usuario\Desktop\G2B\src\shoopingCart.html133534620147682420 0
 46C:\Users\Usuario\Desktop\G2B\src\css\index.css133534621493150105 0

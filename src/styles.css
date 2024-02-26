@@ -158,6 +158,30 @@ footer {
   background-image: url(./img/ordenador-portatil-afiliacion.r_d.2842-2192.webp);
 }
 
+#caja_fotos_nosotros {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+#titulo_xavi {
+  position: relative;
+  top: 2.8em;
+  left: 7em;
+}
+
+#titulo_pep {
+  position: relative;
+  top: 1.4em;
+  left: -1.8em;
+}
+
+#titulo_david {
+  position: relative;
+  top: 0em;
+  left: -9.5em;
+} 
+
 #caja_xavi {
   padding-bottom: 12px;
   padding-left: 16px;
@@ -171,6 +195,21 @@ footer {
 #caja_david {
   padding-bottom: 12px;
   padding-left: 16px;
+}
+
+#imagen_david {
+  width: 30%;
+  height: 30%;
+}
+
+#imagen_pep {
+  width: 30%;
+  height: 30%;
+}
+
+#imagen_xavi {
+  width: 40%;
+  height: 45%;
 }
 
 @media only screen and (max-width: 991px) {
