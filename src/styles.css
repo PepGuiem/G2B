@@ -152,7 +152,12 @@ footer {
 
 }
 
-
+.bg-jumbotron{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 30%;
+  background-image: url(./img/david.PNG);
+}
 
 @media only screen and (max-width: 991px) {
   .navbar-nav .nav-link {
