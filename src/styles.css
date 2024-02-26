@@ -3,7 +3,7 @@
     --color-negro: black;
     --navbar-footer-color: #343a40;
     --box3-color: #333; 
-    --color-blanco: white;
+    --color-blanco: rgb(233, 145, 63);
 }
 
 #video-background {
@@ -42,7 +42,7 @@
 
 
 .navbar-toggler {
-  background-color: white !important;
+  background-color: rgb(235, 170, 31) !important;
 }
 
 .navbar-collapse {

@@ -1,6 +1,47 @@
 body {
-  padding-top: 70px; /* Ajusta este valor según el tamaño del navbar */
+  padding-top: 50px; /* Ajusta este valor según el tamaño del navbar */
 }
+
+:root {
+  --color-blanco: rgb(233, 145, 63);
+}
+
+.nav-link{
+  transition: all 0.2s;
+  position: relative;
+}
+
+
+.nav-link::after{
+  content:'';
+  opacity: 0;
+  transition: all 0.2s;
+  height: 2px;
+  width: 100%;
+  background-color:var(--color-blanco);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.nav-link:hover::after{
+  opacity: 1;
+}
+
+
+.navbar-toggler {
+background-color: rgb(235, 170, 31) !important;
+}
+
+.navbar-collapse {
+display: none;
+}
+
+.navbar-collapse.show {
+display: block;
+
+}
+
 
 
 .col {
@@ -10,8 +51,7 @@ body {
   }
 
   .card{
-    border-radius: 6px;
-    box-shadow: 6px 6px 6px rgb(100, 98, 98);
+    box-shadow: 6px 6px 6px rgb(218, 136, 61);
     margin-top: 4%;
     margin-bottom: 4%;
     z-index: 0;
@@ -63,7 +103,7 @@ body {
   visibility: visible;
 }
 .contenedor figure:hover > .capa h3{
-  margin-top: 10%;
+  margin-top: 27%;
   margin-bottom: 5%;
 }
 .contenedor figure:hover > img{

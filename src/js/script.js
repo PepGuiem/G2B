@@ -64,7 +64,7 @@ function renderGameCards() {
 function createCard(game) {
   games.push(game);
   const cardDiv = document.createElement("div");
-  cardDiv.className = "card";
+  cardDiv.className = "card border-warning";
   cardDiv.style = "width: 18rem;";
   const price = calculatePrice(game.released);
   cardDiv.innerHTML = `
