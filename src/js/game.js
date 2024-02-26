@@ -38,7 +38,8 @@ document.addEventListener("DOMContentLoaded", function() {
         <p>Released: ${gameData.released}</p>
         <p>Rating count: ${gameData.ratings_count}</p>
         </div>
-        <div>
+        <div class="buy">
+        <h2 class="text-white">${calculatePrice(gameData.rating)}</h2>
         <button type="button" class="btn btn-warning fw-bold" onclick="addToCart('${gameData.name}', '${calculatePrice(gameData.rating)}')">PURCHASE</button>
         </div>
   `;
