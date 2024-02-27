@@ -123,7 +123,7 @@ function calculatePrice(releaseDate) {
 function showGame(id){
   var game = games.find(game => game.id == id);
   localStorage.setItem('game', JSON.stringify(game))
-  window.location.replace("http://127.0.0.1:5500/src/game.html")
+  window.location.href = "./game.html";
 }
 
 
