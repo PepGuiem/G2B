@@ -119,6 +119,7 @@ function calculatePrice(releaseDate) {
   }
 }
 
+//Función para poner la info de la card del game del index.html en
 function showGame(id){
   var game = games.find(game => game.id == id);
   localStorage.setItem('game', JSON.stringify(game))
@@ -126,3 +127,31 @@ function showGame(id){
 }
 
 
+//Función meter info de los géneros
+
+async function fetchGenres() {
+  const apiKey = '1baca15855374a6db824d20988b6f976';
+  const apiUrl = `https://api.rawg.io/api/genres?key=${apiKey}`;
+
+  try {
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+    return data.results.slice(0, 4); 
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+}
+
+async function populateGenres() {
+  const genres = await fetchGenres();
+  genres.forEach((genre, index) => {
+    const contenedor = document.getElementById((index + 1).toString()); 
+    const imagen = contenedor.querySelector('img');
+    const titulo = contenedor.querySelector('h3');
+
+    imagen.src = genre.image_background;
+    titulo.textContent = genre.name; 
+  });
+}
+
+window.onload = populateGenres;
