@@ -86,21 +86,23 @@ function createCard(game) {
   const cardBody = document.createElement('div');
   cardBody.classList.add('card-body');
 
-  // Añadir el título de la tarjeta
-  const cardTitle = document.createElement('h5');
-  cardTitle.classList.add('card-title');
-  cardTitle.textContent = game.name;
-  cardBody.appendChild(cardTitle);
-
-  // Añadir el texto de precio a la tarjeta
-  const cardText = document.createElement('p');
-  cardText.classList.add('card-text');
-  cardText.textContent = `Price: ${price}`;
-  cardBody.appendChild(cardText);
-
-  // Añadir la lista de grupos de la tarjeta
   const cardListGroup = document.createElement('ul');
   cardListGroup.classList.add('list-group', 'list-group-flush');
+  // Añadir el título de la tarjeta
+
+  const cardTitle = document.createElement('li');
+  cardTitle.classList.add('list-group-item');
+  cardTitle.textContent = game.name;
+  cardListGroup.appendChild(cardTitle);
+
+  // Añadir el texto de precio a la tarjeta
+  const cardText = document.createElement('li');
+  cardText.classList.add('list-group-item');
+  cardText.textContent = `Price: ${calculatePrice(game.released)}`;
+  cardListGroup.appendChild(cardText);
+
+  // Añadir la lista de grupos de la tarjeta
+
 
   // Añadir el rating a la tarjeta
   const cardRating = document.createElement('li');

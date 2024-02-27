@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <p>Rating count: ${gameData.ratings_count}</p>
         </div>
         <div class="buy">
-        <h2 class="text-white">${calculatePrice(gameData.rating)}</h2>
+        <h2 class="text-white">${calculatePrice(gameData.released)}</h2>
         <button type="button" class="btn btn-warning fw-bold" id="holaaa" value='${gameData.name}'">PURCHASE</button>
         </div>
   `;
