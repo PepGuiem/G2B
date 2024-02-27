@@ -1,3 +1,4 @@
+var price =  0;
 document.addEventListener("DOMContentLoaded", function() {
   const gameData = JSON.parse(localStorage.getItem("game"));
   console.log(gameData)
@@ -40,10 +41,19 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
         <div class="buy">
         <h2 class="text-white">${calculatePrice(gameData.rating)}</h2>
-        <button type="button" class="btn btn-warning fw-bold" onclick="addToCart('${gameData.name}', '${calculatePrice(gameData.rating)}')">PURCHASE</button>
+        <button type="button" class="btn btn-warning fw-bold" id="holaaa" value='${gameData.name}'">PURCHASE</button>
         </div>
   `;
+  price = calculatePrice(gameData.released);
+  document.getElementById("holaaa").addEventListener('click', function(event){
+    console.log("hola")
+    console.log(event.target.value)
+    addToCart(event.target.value, price)
+  })
+  
 });
+
+
 
 
 function calculatePrice(releaseDate) {
