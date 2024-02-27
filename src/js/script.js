@@ -79,17 +79,12 @@ function createCard(game) {
       </ul>
       <div class="card-body">
       <button type="button" class="btn btn-warning fw-bold" onclick="addToCart('${game.name}', '${price}')">PURCHASE</button>
-      <a href="./game" onclick="showGame('${game.id}')><button type="button" class="btn btn-primary" ">View</button></a>
+      <button type="button" class="btn btn-primary" onclick="showGame('${game.id}')">View</button>
       </div>
   `;
   return cardDiv;
 }
 
-function addToCart(gameName, gamePrice) {
-  const shoppingCart = JSON.parse(localStorage.getItem('shoppingCart')) || [];
-  shoppingCart.push({ name: gameName, price: gamePrice });
-  localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart));
-}
 
 function fetchGameData(page) {
   let url = `${GAME_URL}&page=${page}`;
@@ -120,12 +115,7 @@ function calculatePrice(releaseDate) {
 }
 
 //Función para poner la info de la card del game del index.html en
-function showGame(event, id){
-  event.preventDefault();
-  var game = games.find(game => game.id == id);
-  localStorage.setItem('game', JSON.stringify(game))
-  window.location.href = event.target.href;
-}
+
 
 
 //Función meter info de los géneros
