@@ -79,7 +79,7 @@ function createCard(game) {
       </ul>
       <div class="card-body">
       <button type="button" class="btn btn-warning fw-bold" onclick="addToCart('${game.name}', '${price}')">PURCHASE</button>
-      <button type="button" class="btn btn-primary" onclick="showGame('${game.id}')">View</button>
+      <a href="./game" onclick="showGame('${game.id}')><button type="button" class="btn btn-primary" ">View</button></a>
       </div>
   `;
   return cardDiv;
@@ -120,10 +120,11 @@ function calculatePrice(releaseDate) {
 }
 
 //Función para poner la info de la card del game del index.html en
-function showGame( id){
+function showGame(event, id){
+  event.preventDefault();
   var game = games.find(game => game.id == id);
   localStorage.setItem('game', JSON.stringify(game))
-  window.location.href = "./game";
+  window.location.href = event.target.href;
 }
 
 
