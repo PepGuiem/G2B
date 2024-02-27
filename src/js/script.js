@@ -21,7 +21,9 @@ function filterByGenre(genre) {
 
 function resetGameCards() {
   const container = document.getElementById("gameCardsContainer");
-  container.innerHTML = ''; 
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
   page = 0;
   games = []; 
 }
@@ -67,22 +69,81 @@ function createCard(game) {
   cardDiv.className = "card border-warning";
   cardDiv.style = "width: 18rem;";
   const price = calculatePrice(game.released);
-  cardDiv.innerHTML = `
-      <img class="card-img-top" src="${game.background_image}" alt="Card image cap" width="262" height="186">
-      <div class="card-body">
-        <h5 class="card-title">${game.name}</h5>
-        <p class="card-text">Price: ${price}</p>
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Rating: ${game.rating}</li>
-        <li class="list-group-item">Released: ${game.released}</li>
-      </ul>
-      <div class="card-body">
-      <button type="button" class="btn btn-warning fw-bold" onclick="addToCart('${game.name}', '${price}')">PURCHASE</button>
-      <button type="button" class="btn btn-primary" onclick="showGame('${game.id}')">View</button>
-      </div>
-  `;
-  return cardDiv;
+  // Crear el contenedor principal de la tarjeta
+  const cardDiv1 = document.createElement('div');
+  cardDiv1.classList.add('card');
+
+  // Crear la imagen de la tarjeta
+  const cardImg = document.createElement('img');
+  cardImg.classList.add('card-img-top');
+  cardImg.setAttribute('src', game.background_image);
+  cardImg.setAttribute('alt', 'Card image cap');
+  cardImg.setAttribute('width', '262');
+  cardImg.setAttribute('height', '186');
+  cardDiv1.appendChild(cardImg);
+
+  // Crear el cuerpo de la tarjeta
+  const cardBody = document.createElement('div');
+  cardBody.classList.add('card-body');
+
+  // Añadir el título de la tarjeta
+  const cardTitle = document.createElement('h5');
+  cardTitle.classList.add('card-title');
+  cardTitle.textContent = game.name;
+  cardBody.appendChild(cardTitle);
+
+  // Añadir el texto de precio a la tarjeta
+  const cardText = document.createElement('p');
+  cardText.classList.add('card-text');
+  cardText.textContent = `Price: ${price}`;
+  cardBody.appendChild(cardText);
+
+  // Añadir la lista de grupos de la tarjeta
+  const cardListGroup = document.createElement('ul');
+  cardListGroup.classList.add('list-group', 'list-group-flush');
+
+  // Añadir el rating a la tarjeta
+  const cardRating = document.createElement('li');
+  cardRating.classList.add('list-group-item');
+  cardRating.textContent = `Rating: ${game.rating}`;
+  cardListGroup.appendChild(cardRating);
+
+  // Añadir la fecha de lanzamiento a la tarjeta
+  const cardReleased = document.createElement('li');
+  cardReleased.classList.add('list-group-item');
+  cardReleased.textContent = `Released: ${game.released}`;
+  cardListGroup.appendChild(cardReleased);
+
+  // Añadir la lista de grupos a la tarjeta
+  cardDiv1.appendChild(cardListGroup);
+
+  // Añadir el segundo cuerpo de la tarjeta
+  const cardSecondBody = document.createElement('div');
+  cardSecondBody.classList.add('card-body');
+
+  // Añadir el botón de compra a la tarjeta
+  const purchaseButton = document.createElement('button');
+  purchaseButton.classList.add('btn', 'btn-warning', 'fw-bold');
+  purchaseButton.setAttribute('type', 'button');
+  purchaseButton.textContent = 'PURCHASE';
+  purchaseButton.addEventListener('click', () => addToCart(game.name, price));
+  cardSecondBody.appendChild(purchaseButton);
+
+  // Añadir el botón de vista a la tarjeta
+  const viewButton = document.createElement('button');
+  viewButton.classList.add('btn', 'btn-primary');
+  viewButton.setAttribute('type', 'button');
+  viewButton.textContent = 'View';
+  viewButton.addEventListener('click', () => showGame(game.id));
+  cardSecondBody.appendChild(viewButton);
+
+  // Añadir el segundo cuerpo a la tarjeta
+  cardDiv1.appendChild(cardSecondBody);
+
+// Añadir la tarjeta al contenedor principal
+document.body.appendChild(cardDiv1);
+
+  return cardDiv1;
 }
 
 
@@ -116,7 +177,17 @@ function calculatePrice(releaseDate) {
 
 //Función para poner la info de la card del game del index.html en
 
+function showGame(id){
+  var game = games.find(game => game.id == id);
+  localStorage.setItem('game', JSON.stringify(game))
+  window.location.href = "./game.html";
+}
 
+function addToCart(gameName, gamePrice) {
+  const shoppingCart = JSON.parse(localStorage.getItem('shoppingCart')) || [];
+  shoppingCart.push({ name: gameName, price: gamePrice });
+  localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart));
+}
 
 //Función meter info de los géneros
 

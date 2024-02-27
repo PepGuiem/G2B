@@ -96,18 +96,6 @@
     
     <script>
 
-    function showGame(id){
-      var game = games.find(game => game.id == id);
-      localStorage.setItem('game', JSON.stringify(game))
-      window.location.href = "./game.html";
-    }
-
-    function addToCart(gameName, gamePrice) {
-      const shoppingCart = JSON.parse(localStorage.getItem('shoppingCart')) || [];
-      shoppingCart.push({ name: gameName, price: gamePrice });
-      localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart));
-    }
-
       async function fetchGenres() {
         const apiKey = '1baca15855374a6db824d20988b6f976';
         const apiUrl = `https://api.rawg.io/api/genres?key=${apiKey}`;
@@ -144,7 +132,7 @@
     
      
 
-    <script src="/src/js/script.js"></script>
+    <script type="module" src="/src/js/script.js"></script>
 </body>
   </body>
 </html>
