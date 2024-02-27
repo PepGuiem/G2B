@@ -79,7 +79,7 @@ function createCard(game) {
       </ul>
       <div class="card-body">
       <button type="button" class="btn btn-warning fw-bold" onclick="addToCart('${game.name}', '${price}')">PURCHASE</button>
-      <a href="./game.html" onclick="showGame('${game.id}')><button type="button" class="btn btn-primary" ">View</button></a>
+      <a href="./game" onclick="showGame('${game.id}')><button type="button" class="btn btn-primary" ">View</button></a>
       </div>
   `;
   return cardDiv;
