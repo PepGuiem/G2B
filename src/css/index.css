@@ -129,6 +129,11 @@ display: block;
   margin-top: 11%;
 }
 
+.one, .two, .three, .four{
+  margin-top: 5%; 
+  margin-bottom: 4%;
+}
+
 @media screen and (max-width: 1326px) {
   .contenedor figure{
     height: 180px;
@@ -185,7 +190,7 @@ display: block;
   }
   
   .contenedor{
-      margin-top: 10%;
+      margin-top: 15%;
   }
   
   .contenedor figure{
