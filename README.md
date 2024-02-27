@@ -15,3 +15,13 @@ LISTA DE COSAS POR HACER (de la más a la menos importante):
 - Darle mejores estilos al login.html, al carrito, a la página de compra/búsqueda de videojuegos y a la página de soporte/atención al cliente.
 - Revisar el performance.
 - Revisar la accesibilidad.
+
+
+ACCESIBILIDAD
+- Arial-label en links / imagenes
+- Tab index a elementos para ir navegando con el teclado 
+- Arreglar lo que te hace el lighthouse
+
+PERFORMANCE 
+- Arreglar todo lo rojo / amarillo que da el lighthouse que no sea el peso de las imagenes o cosas que no controlamos nosotros.
+- Cache-control para netlify
