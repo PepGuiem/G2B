@@ -73,6 +73,7 @@ function createCard(game) {
   const cardDiv1 = document.createElement('div');
   cardDiv1.classList.add('card');
   cardDiv1.style.width = "100%"
+  cardDiv1.setAttribute('tab-index', '0');
 
   // Crear la imagen de la tarjeta
   const cardImg = document.createElement('img');
@@ -81,6 +82,8 @@ function createCard(game) {
   cardImg.setAttribute('alt', 'Card image cap');
   cardImg.setAttribute('width', '262');
   cardImg.setAttribute('height', '186');
+  cardImg.setAttribute('loading', 'lazy');
+  cardImg.setAttribute('aria-label', game.slug);
   cardDiv1.appendChild(cardImg);
 
   // Crear el cuerpo de la tarjeta
@@ -130,6 +133,7 @@ function createCard(game) {
 
   // Añadir el botón de vista a la tarjeta
   const viewButton = document.createElement('button');
+  viewButton.setAttribute('aria-label', game.id);
   viewButton.classList.add('btn', 'btn-primary');
   viewButton.setAttribute('type', 'button');
   viewButton.textContent = 'View';
@@ -178,7 +182,7 @@ function calculatePrice(releaseDate) {
 function showGame(id){
   var game = games.find(game => game.id == id);
   localStorage.setItem('game', JSON.stringify(game))
-  window.location.href = "./game";
+  window.location.href = "./game.html";
 }
 
 function addToCart(gameName, gamePrice) {
