@@ -69,9 +69,10 @@ function createCard(game) {
   cardDiv.className = "card border-warning";
   cardDiv.style = "width: 18rem;";
   const price = calculatePrice(game.released);
-  // Crear el contenedor principal de la tarjeta
+
   const cardDiv1 = document.createElement('div');
   cardDiv1.classList.add('card');
+  cardDiv1.style.width = "100%"
 
   // Crear la imagen de la tarjeta
   const cardImg = document.createElement('img');
@@ -101,10 +102,6 @@ function createCard(game) {
   cardText.textContent = `Price: ${calculatePrice(game.released)}`;
   cardListGroup.appendChild(cardText);
 
-  // Añadir la lista de grupos de la tarjeta
-
-
-  // Añadir el rating a la tarjeta
   const cardRating = document.createElement('li');
   cardRating.classList.add('list-group-item');
   cardRating.textContent = `Rating: ${game.rating}`;
