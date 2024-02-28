@@ -165,6 +165,7 @@ footer {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 30%;
+  filter: brightness(80%);
   background-image: url(./img/ordenador-portatil-afiliacion.r_d.2842-2192.webp);
 }
 
