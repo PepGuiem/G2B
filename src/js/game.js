@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <div class="carousel-inner">
           ${gameData.short_screenshots.map((element, index) => (
             `<div class="carousel-item ${index === 0 ? 'active' : ''}">
-                <img src="${element.image}" class="d-block w-100" alt="Segundo Proyecto">
+                <img src="${element.image}" class="d-block w-100" alt="Segundo Proyecto" aria-label="${gameData.name + " " + index}">
             </div>`
         ))}
           </div>
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   const right = document.getElementById("right");
   right.innerHTML = `
-        <div class="imagen" style="background-image:url(${gameData.background_image});"> </div>
+        <div class="imagen" style="background-image:url(${gameData.background_image});" aria-label="${gameData.name}"> </div>
         <div class="title align-items-center d-flex"><h1 class="text-white">${gameData.name}</h1></div>
         <div class="text-white rating">
         <p>Rating: ${gameData.rating}</p>
