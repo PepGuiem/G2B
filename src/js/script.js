@@ -1,7 +1,7 @@
 const MAX_ROWS = 25;
 const GAMES_PER_ROW = 4;
 const TOTAL_GAMES = MAX_ROWS * GAMES_PER_ROW; 
-const API_KEY = "78631e57d2f04a009a24fb2ae423e716";
+const API_KEY = "2af6047671304446b7c7377402f0ca5a";
 const GAME_URL = "https://api.rawg.io/api/games?key=" + API_KEY;
 const MIN_RATING = 4.1;
 var page = 0;
@@ -194,7 +194,7 @@ function addToCart(gameName, gamePrice) {
 //Función meter info de los géneros
 
 async function fetchGenres() {
-  const apiKey = '78631e57d2f04a009a24fb2ae423e716';
+  const apiKey = '2af6047671304446b7c7377402f0ca5a';
   const apiUrl = `https://api.rawg.io/api/genres?key=${apiKey}`;
 
   try {
