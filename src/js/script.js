@@ -182,7 +182,7 @@ function calculatePrice(releaseDate) {
 function showGame(id){
   var game = games.find(game => game.id == id);
   localStorage.setItem('game', JSON.stringify(game))
-  window.location.href = "./game.html";
+  window.location.href = "./game";
 }
 
 function addToCart(gameName, gamePrice) {
